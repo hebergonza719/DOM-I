@@ -47,7 +47,10 @@ for (let i = 0; i < navItems.length; i ++) {
 }
 
 let ctaHOne = document.getElementsByTagName("h1");
-ctaHOne[0].innerHTML = 'DOM<br> Is<br> Awesome';
+ctaHOne[0].innerHTML = siteContent["cta"]["h1"].replace(/\s/g, "<br>");
+// /g is to replace all instances of <br>
+// / \s / is to replace all spaces in an html string
+// DOM Is Awesome
 
 let ctaImage = document.querySelector("#cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -93,3 +96,18 @@ contactParagraphs[2].textContent = siteContent["contact"]["email"];
 let footerElem = document.getElementsByTagName("footer");
 let footerText = footerElem[0].getElementsByTagName("p");
 footerText[0].textContent = siteContent["footer"]["copyright"];
+
+let eventsAnchor = document.createElement("a");
+let navbar = document.querySelector("header nav");
+navbar.append(eventsAnchor);
+eventsAnchor.textContent = "Events";
+
+let getStartAnchor = document.createElement("a");
+navbar.prepend(getStartAnchor);
+getStartAnchor.textContent = "Get Started!";
+
+navItems = document.querySelectorAll("nav a");
+
+navItems.forEach((item) => {
+  item.style.color = 'green';
+});
