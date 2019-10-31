@@ -111,3 +111,24 @@ navItems = document.querySelectorAll("nav a");
 navItems.forEach((item) => {
   item.style.color = 'green';
 });
+
+getStartAnchor.href = "#";
+eventsAnchor.href = "#";
+
+ctaHOne[0].style.fontSize = "6rem";
+ctaHOne[0].style.color = "green";
+
+// HFours.forEach((item) => {
+//   item.style.fontSize = "3rem";
+// });
+// forEach doesn't work on HTMLCollections
+
+for(let i = 0; i < HFours.length; i++) {
+  HFours[i].style.fontSize = "2.5rem";
+  HFours[i].style.color = "#00008b";
+  HFours[i].style.marginBottom = "1.5rem";
+};
+
+for(let i = 0; i < paragraphs.length; i++) {
+  paragraphs[i].style.fontSize = "1rem";
+}
