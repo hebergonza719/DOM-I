@@ -87,7 +87,7 @@ let contactHFour = document.querySelector(".contact h4");
 contactHFour.textContent = siteContent["contact"]["contact-h4"];
 
 let contactParagraphs = document.querySelectorAll(".contact p");
-contactParagraphs[0].textContent = siteContent["contact"]["address"];
+contactParagraphs[0].innerHTML = siteContent["contact"]["address"].replace(/t\s/, "t<br>");
 
 contactParagraphs[1].textContent = siteContent["contact"]["phone"]; 
 
