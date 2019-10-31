@@ -132,3 +132,19 @@ for(let i = 0; i < HFours.length; i++) {
 for(let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.fontSize = "1rem";
 }
+
+let container = document.querySelector(".container");
+
+let oriBtn = document.createElement("button");
+
+container.insertBefore(oriBtn, container.children[4]);
+// .insertBefore is used to insert a child in a parent node at a specific index
+
+oriBtn.textContent = "Change Background to Pink";
+oriBtn.style.margin = "0 auto";
+oriBtn.style.display = "block";
+oriBtn.style.marginTop = "2rem";
+
+oriBtn.addEventListener("click", (event) => {
+  container.style.backgroundColor = "pink";
+});
